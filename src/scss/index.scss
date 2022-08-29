@@ -1,0 +1,48 @@
+@use "./config";
+@import "./ipinfocard";
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: config.$font-rubik;
+}
+header{
+    position: relative;
+    background-image: url(../images/pattern-bg.png);
+    height:40vh;
+    width: 100%;
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 1rem;
+    color: white;
+    form{
+        width: 27rem;
+        display: inline-flex;
+        input[type='text']
+        {
+            width: 100%;
+            padding: 0.7rem;
+            border: none;
+            outline: none;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        button{
+            background-color: black;
+            border: none;
+            outline: none;
+            padding: 0.7rem 1rem;
+            cursor: pointer;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            img{
+                width: 7px;
+            }
+        }
+    }
+}
