@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/IP-Tracker-APP/static/css/main.2644f349.css",
-    "main.js": "/IP-Tracker-APP/static/js/main.98316131.js",
-    "static/js/483.68570754.chunk.js": "/IP-Tracker-APP/static/js/483.68570754.chunk.js",
+    "main.js": "/IP-Tracker-APP/static/js/main.90b83000.js",
+    "static/js/483.b25e75d6.chunk.js": "/IP-Tracker-APP/static/js/483.b25e75d6.chunk.js",
     "static/js/787.21528e09.chunk.js": "/IP-Tracker-APP/static/js/787.21528e09.chunk.js",
     "static/media/pattern-bg.png": "/IP-Tracker-APP/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
     "index.html": "/IP-Tracker-APP/index.html",
     "static/media/icon-location.svg": "/IP-Tracker-APP/static/media/icon-location.7e6459d2a9278295ae782e100965be4b.svg",
     "static/media/icon-arrow.svg": "/IP-Tracker-APP/static/media/icon-arrow.2eaaa5ee3602d5aa14a2dba69e9fb7a0.svg",
     "main.2644f349.css.map": "/IP-Tracker-APP/static/css/main.2644f349.css.map",
-    "main.98316131.js.map": "/IP-Tracker-APP/static/js/main.98316131.js.map",
-    "483.68570754.chunk.js.map": "/IP-Tracker-APP/static/js/483.68570754.chunk.js.map",
+    "main.90b83000.js.map": "/IP-Tracker-APP/static/js/main.90b83000.js.map",
+    "483.b25e75d6.chunk.js.map": "/IP-Tracker-APP/static/js/483.b25e75d6.chunk.js.map",
     "787.21528e09.chunk.js.map": "/IP-Tracker-APP/static/js/787.21528e09.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2644f349.css",
-    "static/js/main.98316131.js"
+    "static/js/main.90b83000.js"
   ]
 }
