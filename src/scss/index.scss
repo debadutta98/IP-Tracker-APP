@@ -14,7 +14,10 @@ body{
 header{
     position: relative;
     background-image: url(../images/pattern-bg.png);
-    height:40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:15rem;
     width: 100%;
     display: flex;
     gap:1rem;
@@ -24,7 +27,7 @@ header{
     padding-top: 1rem;
     color: white;
     form{
-        width: 40vw;
+        width: 30rem;
         display: inline-flex;
         @media screen and (max-width:640px) {
             width: 70vw;
