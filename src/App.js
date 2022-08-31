@@ -1,7 +1,8 @@
 import Header from './components/Header';
-import Map,{Marker} from "react-map-gl";
+// import Map,{Marker} from "react-map-gl";
 import { useEffect, useState } from 'react';
-import "mapbox-gl/dist/mapbox-gl.css";
+import { MapContainer, Popup, Marker, TileLayer } from 'react-leaflet';
+import {icon} from "leaflet";
 function App() {
   const [result,setResult]=useState({
     ip:"",
@@ -37,28 +38,29 @@ function App() {
   return (
     <>
       <Header ipinfo={result} onUpdateState={onUpdateState}/>
-    <div className='map-container'>
-        <Map
-          initialViewState={{
-            longitude: -0.09,
-            latitude: 51.505,
-            zoom: 10,
-          }}
-          latitude={+result.lat}
-          longitude={+result.log}
-          mapboxAccessToken={process.env["REACT_APP_MAP_BOX_API_KEY"]}
-          style={{ width: "100%", height: "100vh" }}
-          mapStyle="mapbox://styles/mapbox/streets-v11"
+        <MapContainer 
+        key={JSON.stringify([+result.lat, +result.log])}
+        center={[+result.lat, +result.log]}
+        zoom={13} 
+        scrollWheelZoom={false} 
+        zoomControl={false}
+        style={{width:"100%",height:"100vh",zIndex:0}}
         >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
           <Marker 
-          latitude={+result.lat} 
-          longitude={+result.log}
-          anchor="bottom"
+          position={[+result.lat, +result.log]}
+          icon={icon({
+            iconUrl:require("./images/icon-location.svg").default
+          })}
           >
-            <img src={require("./images/icon-location.svg").default} alt="marker"/>
+            <Popup>
+            {`${+result.lat}, ${+result.log}`}
+            </Popup>
           </Marker>
-        </Map>
-    </div>
+        </MapContainer>
     </>
   );
 }
