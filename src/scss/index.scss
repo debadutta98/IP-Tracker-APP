@@ -5,6 +5,9 @@
     padding:0%;
     box-sizing: border-box;
 }
+html,body{
+    height: 100%;
+}
 body{
     font-family: config.$font-rubik;
 }
@@ -21,8 +24,11 @@ header{
     padding-top: 1rem;
     color: white;
     form{
-        width: 27rem;
+        width: 40vw;
         display: inline-flex;
+        @media screen and (max-width:640px) {
+            width: 70vw;
+        }
         input[type='text']
         {
             width: 100%;
@@ -45,4 +51,10 @@ header{
             }
         }
     }
+}
+.map-container{
+    height: 100vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
 }

@@ -1,11 +1,13 @@
+@use "./config";
 .ipinfocard{
     position: absolute;
     background-color: white;
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
+    z-index: 10;
+    box-shadow: 0px 1px 5px config.$dark-grey;
     padding:2rem;
-    gap:3rem;
+    gap:3vw;
     hr{
         border: 1px ridge config.$dark-grey;
         border-left: none;
@@ -23,12 +25,34 @@
             word-spacing: 3px;
             letter-spacing: 2px;
             color:config.$dark-grey;
-            font-size: x-small;
+            font-size: 1vw;
         }
         .information{
             color:config.$very-dark-grey;
             font-weight: bold;
+            font-size: 1.5vw;
         }
     }
     bottom: -3.5rem;
+    @media screen and (max-width:640px) {
+        flex-direction: column;
+        width:70vw;
+        align-items: center;
+        text-align: center;
+        gap:0.5rem;
+        padding: 1rem;
+        bottom: -30vh;
+        hr{
+            display: none;
+        }
+        li{
+            line-height: 1.3rem;
+            .labeling{
+                font-size: 2vw;
+            }
+            .information{
+                font-size: 3vw;
+            }
+        }
+    }
 }
